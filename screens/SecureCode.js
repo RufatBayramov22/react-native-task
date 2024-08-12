@@ -11,7 +11,7 @@ const SecureCode = ({navigation}) => {
       newCode[index] = text;
       setCode(newCode);
 
-      // Növbəti input sahəsinə fokus
+    
       if (text !== '' && index < 5) {
         inputs[index + 1].focus();
       }

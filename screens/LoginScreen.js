@@ -19,14 +19,14 @@ const LoginScreen = ({ navigation }) => {
       console.log("Response", res);
       if (res.status === 200) {
         Alert.alert("Welcome Back");
-        // Başarıyla giriş yaptıktan sonra yönlendirme
+        
         navigation.navigate('WelcomePage');
       } else {
         Alert.alert("Invalid credentials");
       }
     } catch (error) {
       console.error("Error:", error);
-      // Hata mesajını state'e set edelim
+      
       setError(error.response?.data?.message || "An error occurred");
       Alert.alert("Error", error.response?.data?.message || "An error occurred");
     }
